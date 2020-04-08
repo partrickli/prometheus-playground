@@ -33,7 +33,7 @@ scrape_configs:
   - job_name: ping-site
     metrics_path: /probe
     params:
-      module: [icmp]
+      module: [icmp_ipv4]
     static_configs:
       - targets:
         - localhost
