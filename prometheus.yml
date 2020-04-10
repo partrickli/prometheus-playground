@@ -28,7 +28,10 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: host.docker.internal:9115
+        #host MacOS
+        replacement: host.docker.internal:9115 
+        # host Linux
+        # replacement: localhost:9115
 
   - job_name: ping-site
     metrics_path: /probe
@@ -45,4 +48,7 @@ scrape_configs:
       - source_labels: [__param_target]
         target_label: instance
       - target_label: __address__
-        replacement: host.docker.internal:9115
+        # host MacOS
+        replacement: host.docker.internal:9115 
+        # host Linux
+        # replacement: localhost:9115
